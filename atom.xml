@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>coucoui03X`Blog</title>
+  <title>coucoui03`Blog</title>
   
   <subtitle>生活明朗，万物可爱</subtitle>
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-04-05T08:10:39.144Z</updated>
+  <updated>2024-04-05T10:12:56.644Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/posts/undefined.html"/>
+    <id>http://example.com/posts/undefined.html</id>
+    <published>2024-04-05T10:12:03.889Z</published>
+    <updated>2024-04-05T10:12:56.644Z</updated>
+    
+    <content type="html"><![CDATA[{"name":"coucoui03`Blog","short_name":"coucoui03","theme_color":"#3b70fc","background_color":"#3b70fc","display":"standalone","scope":"/","start_url":"/","icons":[{"src":"/img/siteicon/16.png","sizes":"16x16","type":"image/png"},{"src":"/img/siteicon/32.png","sizes":"32x32","type":"image/png"},{"src":"/img/siteicon/48.png","sizes":"48x48","type":"image/png"},{"src":"/img/siteicon/64.png","sizes":"64x64","type":"image/png"},{"src":"/img/siteicon/128.png","sizes":"128x128","type":"image/png"},{"src":"/img/siteicon/144.png","sizes":"144x144","type":"image/png"},{"src":"/img/siteicon/512.png","sizes":"512x512","type":"image/png"}],"splash_pages":null}]]></content>
+    
+    
+      
+      
+    <summary type="html">{&quot;name&quot;:&quot;coucoui03`Blog&quot;,&quot;short_name&quot;:&quot;coucoui03&quot;,&quot;theme_color&quot;:&quot;#3b70fc&quot;,&quot;background_color&quot;:&quot;#3b70fc&quot;,&quot;display&quot;:&quot;standalone&quot;,&quot;scope&quot;:&quot;/&quot;,&quot;s</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>

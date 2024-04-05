@@ -3,11 +3,11 @@
   <title>coucoui03`Blog</title>
   
   <subtitle>生活明朗，万物可爱</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://coucoui03.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://coucoui03.github.io/"/>
   <updated>2024-04-05T10:12:56.644Z</updated>
-  <id>http://example.com/</id>
+  <id>https://coucoui03.github.io/</id>
   
   <author>
     <name>coucoui03</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title></title>
-    <link href="http://example.com/posts/undefined.html"/>
-    <id>http://example.com/posts/undefined.html</id>
+    <link href="https://coucoui03.github.io/posts/undefined.html"/>
+    <id>https://coucoui03.github.io/posts/undefined.html</id>
     <published>2024-04-05T10:12:03.889Z</published>
     <updated>2024-04-05T10:12:56.644Z</updated>
     
@@ -38,8 +38,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/posts/4a17b156.html"/>
-    <id>http://example.com/posts/4a17b156.html</id>
+    <link href="https://coucoui03.github.io/posts/4a17b156.html"/>
+    <id>https://coucoui03.github.io/posts/4a17b156.html</id>
     <published>2024-04-05T07:43:48.712Z</published>
     <updated>2024-04-05T08:10:39.144Z</updated>
     

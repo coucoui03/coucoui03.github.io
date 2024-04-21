@@ -23,6 +23,77 @@
     <published>2024-04-06T11:56:40.000Z</published>
     <updated>2024-04-12T10:08:00.000Z</updated>
     
+    <content type="html"><![CDATA[<h1 id="70-爬楼梯"><a href="#70-爬楼梯" class="headerlink" title="70-爬楼梯"></a>70-爬楼梯</h1><ul><li><p>题目描述</p><ul><li>假设你正在爬楼梯。需要 n 阶你才能到达楼顶。每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？</li></ul></li><li><p>解题思路：</p><ul><li>1阶   1种</li><li>2阶   2种</li><li>3阶   3种</li></ul></li><li><p>步骤</p><ol><li>dp数组以及下际的含义：<br> dp[i]:达到i阶有dp[i]种方法</li><li>递推公式<br> dp[i] = dp[i-1] + dp[i-2]</li><li>dp数组如何初始化<br> dp[1] = 1; dp[2] = 2;尽量不初始化dp[0]，因为题目要求是正整数</li><li>遍历顺序<br> 从前向后遍历<br> 注意：很多动规的题目是从后往前遍历的</li><li>打印数组</li></ol></li><li><p>代码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int climbStairs(int n) &#123;</span><br><span class="line">        if(n&lt;=1) return n;</span><br><span class="line">        vector&lt;int&gt; dp(n+1);</span><br><span class="line">        dp[1] = 1;</span><br><span class="line">        dp[2] = 2;</span><br><span class="line">        for(int i = 3; i &lt;= n; i++)&#123;</span><br><span class="line">            dp[i] = dp[i-1] + dp[i-2];</span><br><span class="line">        &#125;</span><br><span class="line">        return dp[n];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><ul><li>时间复杂度：O(n)</li><li>空间复杂度：O(n)</li></ul></li></ul><p>优化空间复杂度<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int climbStairs(int n) &#123;</span><br><span class="line">        if(n &lt;= 1) return n;</span><br><span class="line">        int dp[3];</span><br><span class="line">        dp[1] = 1;</span><br><span class="line">        dp[2] = 2;</span><br><span class="line">        for(int i = 3; i &lt;= n; i++)&#123;</span><br><span class="line">            int sum = dp[1] + dp[2];</span><br><span class="line">            dp[1] = dp[2];</span><br><span class="line">            dp[2] = sum;</span><br><span class="line">        &#125;</span><br><span class="line">        return dp[2];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;70-爬楼梯&quot;&gt;&lt;a href=&quot;#70-爬楼梯&quot; class=&quot;headerlink&quot; title=&quot;70-爬楼梯&quot;&gt;&lt;/a&gt;70-爬楼梯&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;题目描述&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;假设你正在爬楼梯。需要 n 阶你才能到达楼顶。每次你可</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>软件测试</title>
+    <link href="https://coucoui03.github.io/posts/dfb8a81f.html"/>
+    <id>https://coucoui03.github.io/posts/dfb8a81f.html</id>
+    <published>2024-04-06T11:56:40.000Z</published>
+    <updated>2024-04-12T10:08:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h1><ol><li>dp数组以及下际的含义</li><li>递推公式</li><li>dp数组如何初始化</li><li>遍历顺序</li><li>打印数组</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;动态规划&quot;&gt;&lt;a href=&quot;#动态规划&quot; class=&quot;headerlink&quot; title=&quot;动态规划&quot;&gt;&lt;/a&gt;动态规划&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;dp数组以及下际的含义&lt;/li&gt;
+&lt;li&gt;递推公式&lt;/li&gt;
+&lt;li&gt;dp数组如何初始化&lt;/li&gt;
+&lt;li&gt;遍历</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>软件测试</title>
+    <link href="https://coucoui03.github.io/posts/dfb8a81f.html"/>
+    <id>https://coucoui03.github.io/posts/dfb8a81f.html</id>
+    <published>2024-04-06T11:56:40.000Z</published>
+    <updated>2024-04-12T10:08:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h1><ol><li>dp数组以及下际的含义</li><li>递推公式</li><li>dp数组如何初始化</li><li>遍历顺序</li><li>打印数组</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;动态规划&quot;&gt;&lt;a href=&quot;#动态规划&quot; class=&quot;headerlink&quot; title=&quot;动态规划&quot;&gt;&lt;/a&gt;动态规划&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;dp数组以及下际的含义&lt;/li&gt;
+&lt;li&gt;递推公式&lt;/li&gt;
+&lt;li&gt;dp数组如何初始化&lt;/li&gt;
+&lt;li&gt;遍历</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>软件测试</title>
+    <link href="https://coucoui03.github.io/posts/dfb8a81f.html"/>
+    <id>https://coucoui03.github.io/posts/dfb8a81f.html</id>
+    <published>2024-04-06T11:56:40.000Z</published>
+    <updated>2024-04-12T10:08:00.000Z</updated>
+    
     <content type="html"><![CDATA[<div class="tip home"><h1 id="软件测试"><a href="#软件测试" class="headerlink" title="软件测试"></a>软件测试</h1></div><div class="tip success"><h1 id="软件测试-六大流程"><a href="#软件测试-六大流程" class="headerlink" title="软件测试 六大流程"></a><emp>软件测试</emp> 六大流程</h1></div><ul><li>需求分析</li><li>测试计划<ul><li>接口测试</li><li>性能测试</li></ul></li><li>用例编写<ul><li>验证项目是否符合需求的操作文档</li></ul></li><li>用例执行</li><li>缺陷管理</li><li>测试总结</li></ul><div class="tip success"><h3 id="1、测试分类"><a href="#1、测试分类" class="headerlink" title="1、测试分类"></a>1、测试分类</h3></div><ol><li>单元测试<ul><li>针对程序源代码进行测试</li></ul></li><li>集成测试<ul><li>又称<mark class="hl-label blue">接口测试</mark> ，针对模块之间访问地址进行测试</li></ul></li><li>系统测试<ul><li>对整个系统进行功能、兼容、文档等测试</li></ul></li><li>验收测试<ul><li>主要分为内测、公测</li></ul></li></ol><ul><li>黑盒、灰盒、白盒</li></ul><div class="tip success"><h3 id="2、质量模型"><a href="#2、质量模型" class="headerlink" title="2、质量模型"></a>2、质量模型</h3></div><ul><li>功能、性能、兼容、易用、安全、可靠性、移植性、维护性</li></ul><div class="tip success"><h3 id="3、测试用例"><a href="#3、测试用例" class="headerlink" title="3、测试用例"></a>3、测试用例</h3></div><ol><li>定义：为测试项目而设计的执行文档<ul><li>防止漏测</li><li>实施测试的标准</li></ul></li><li>用例设计编写格式<ul><li>用例编号：项目<em>模块</em>编号</li><li>用例标题：预期结果（测试点）</li><li>项目/模块：所属项目和模块</li><li>优先级：表示用例的重要程度或者影响力<br>P0~P4（P0最高，用户的使用频率）</li><li>前置条件：执行此条用例，有哪些前置条件</li><li>测试步骤：描述操作步骤</li><li>测试数据：操作的数据，没有为空</li><li>预期结果：期望达到的结果<h2 id="3-1、等价类划分—能对穷举场景设计测试点（）"><a href="#3-1、等价类划分—能对穷举场景设计测试点（）" class="headerlink" title="3.1、等价类划分—能对穷举场景设计测试点（）"></a>3.1、等价类划分—能对穷举场景设计测试点（<mark class="hl-label blue">类型</mark> ）</h2></li></ul></li><li>有效等价（有效等价取1个值）</li><li>无效等价（每个无效集合取1个）</li></ol><ul><li>长度、类型、规则</li><li>重点：<ol><li>正向用例：一条尽可能覆盖多条</li><li>逆向用例：每一条数据，都是一条单独用例<h2 id="3-2、边界值分析方法—解决边界位数限制问题（）"><a href="#3-2、边界值分析方法—解决边界位数限制问题（）" class="headerlink" title="3.2、边界值分析方法—解决边界位数限制问题（）"></a>3.2、边界值分析方法—解决边界位数限制问题（<mark class="hl-label blue">位数</mark> ）</h2></li></ol></li></ul><ol><li>边界范围节点<ol><li>上点：边界上的点</li><li>离点：距离上点最近的点</li><li>内点：范围内的点 （开内闭外）</li></ol></li><li>提示：<ol><li>有关范围限制，最多5条用例（暂时未优化）</li><li>边界值能解决位数限制问题，但是不能解决类型问题（要结合等价类）<h2 id="3-3、判定表法—有条件依赖关系"><a href="#3-3、判定表法—有条件依赖关系" class="headerlink" title="3.3、判定表法—有条件依赖关系"></a>3.3、判定表法—有条件依赖关系</h2></li></ol></li><li>定义：是一种以表格形式表达多条件逻辑判断的工具<ol><li>条件桩：列出问题中的所有条件，列出条件的次序无关紧要</li><li>动作桩：列出问题中可能采取的操作，操作的排列顺序没有约束</li><li>条件项：</li><li>动作项：</li></ol></li><li>规则：<ol><li>判定表中贯穿条件项和动作项的一列就是一条规则</li><li>假设有n个条件，每个条件的取值有两个（0，1），全组合有2的n次方种规则</li><li>判定表法适合4个以内条件依赖关系，超过应采用（正交法）来解决<h2 id="3-4、场景法"><a href="#3-4、场景法" class="headerlink" title="3.4、场景法"></a>3.4、场景法</h2></li></ol></li><li>定义：又称流程图法，业务用例是根据流程图进行梳理的</li><li>先测试业务，再测试单功能<h2 id="3-5、错误推荐法"><a href="#3-5、错误推荐法" class="headerlink" title="3.5、错误推荐法"></a>3.5、错误推荐法</h2></li><li>定义：通过经验推测系统可能出现的问题</li><li>主要用于所有用例都覆盖完成，并且bug都修复完成，离上线还有一段时间，再用错误推荐法去覆盖主要业务和未测试的功能。</li></ol><div class="tip success"><h3 id="4、软件缺陷"><a href="#4、软件缺陷" class="headerlink" title="4、软件缺陷"></a>4、软件缺陷</h3></div><h2 id="4-1缺陷介绍"><a href="#4-1缺陷介绍" class="headerlink" title="4.1缺陷介绍"></a>4.1缺陷介绍</h2><ol><li>定义：软件在使用过程中存在的任何问题都叫软件的缺陷，简称bug</li><li>判定标准：<ol><li>少功能</li><li>功能错误</li><li>多功能</li><li>隐形功能错误（预期结果）</li><li>不易使用（软件测试人员）</li></ol></li><li>缺陷产生的原因：<ol><li>需求</li><li>设计</li><li>编码</li><li>运行</li></ol></li><li>缺陷提交要素<ol><li>缺陷报告编号</li><li>严重程度<ol><li>严重：主功能</li><li>一般：次要功能</li><li>微小：易用性、界面</li><li>建议：建议性问题</li></ol></li><li>缺陷优先级</li><li>Bug类型</li><li>缺陷状态</li></ol></li></ol>]]></content>
     
     

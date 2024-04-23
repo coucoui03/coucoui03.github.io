@@ -5,23 +5,10 @@
     
     <entry>
       <title>70-爬楼梯</title>
-      <link href="/posts/dfb8a81g.html"/>
-      <url>/posts/dfb8a81g.html</url>
+      <link href="/posts/8f66c494.html"/>
+      <url>/posts/8f66c494.html</url>
       
         <content type="html"><![CDATA[<h1 id="70-爬楼梯"><a href="#70-爬楼梯" class="headerlink" title="70-爬楼梯"></a>70-爬楼梯</h1><ul><li><p>题目描述</p><ul><li>假设你正在爬楼梯。需要 n 阶你才能到达楼顶。每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？</li></ul></li><li><p>解题思路：</p><ul><li>1阶   1种</li><li>2阶   2种</li><li>3阶   3种</li></ul></li><li><p>步骤</p><ol><li>dp数组以及下际的含义：<br> dp[i]:达到i阶有dp[i]种方法</li><li>递推公式<br> dp[i] = dp[i-1] + dp[i-2]</li><li>dp数组如何初始化<br> dp[1] = 1; dp[2] = 2;尽量不初始化dp[0]，因为题目要求是正整数</li><li>遍历顺序<br> 从前向后遍历<br> 注意：很多动规的题目是从后往前遍历的</li><li>打印数组</li></ol></li><li><p>代码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int climbStairs(int n) &#123;</span><br><span class="line">        if(n&lt;=1) return n;</span><br><span class="line">        vector&lt;int&gt; dp(n+1);</span><br><span class="line">        dp[1] = 1;</span><br><span class="line">        dp[2] = 2;</span><br><span class="line">        for(int i = 3; i &lt;= n; i++)&#123;</span><br><span class="line">            dp[i] = dp[i-1] + dp[i-2];</span><br><span class="line">        &#125;</span><br><span class="line">        return dp[n];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><ul><li>时间复杂度：O(n)</li><li>空间复杂度：O(n)</li></ul></li></ul><p>优化空间复杂度<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int climbStairs(int n) &#123;</span><br><span class="line">        if(n &lt;= 1) return n;</span><br><span class="line">        int dp[3];</span><br><span class="line">        dp[1] = 1;</span><br><span class="line">        dp[2] = 2;</span><br><span class="line">        for(int i = 3; i &lt;= n; i++)&#123;</span><br><span class="line">            int sum = dp[1] + dp[2];</span><br><span class="line">            dp[1] = dp[2];</span><br><span class="line">            dp[2] = sum;</span><br><span class="line">        &#125;</span><br><span class="line">        return dp[2];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>软件测试</title>
-      <link href="/posts/dfb8a81e.html"/>
-      <url>/posts/dfb8a81e.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h1><ol><li>dp数组以及下际的含义</li><li>递推公式</li><li>dp数组如何初始化</li><li>遍历顺序</li><li>打印数组</li></ol>]]></content>
       
       
       
@@ -72,31 +59,9 @@
     
     
     <entry>
-      <title>相册集</title>
-      <link href="/album/index.html"/>
-      <url>/album/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>关于</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -127,9 +92,20 @@
     
     
     <entry>
-      <title>即刻短文</title>
-      <link href="/essay/index.html"/>
-      <url>/essay/index.html</url>
+      <title>相册集</title>
+      <link href="/album/index.html"/>
+      <url>/album/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -141,28 +117,6 @@
       <title>我的装备</title>
       <link href="/equipment/index.html"/>
       <url>/equipment/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>音乐馆</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -193,9 +147,42 @@
     
     
     <entry>
+      <title>即刻短文</title>
+      <link href="/essay/index.html"/>
+      <url>/essay/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>世界各地风景</title>
       <link href="/wordScenery/index.html"/>
       <url>/wordScenery/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>音乐馆</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       

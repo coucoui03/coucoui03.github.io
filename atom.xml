@@ -6,7 +6,7 @@
   <link href="https://coucoui03.github.io/atom.xml" rel="self"/>
   
   <link href="https://coucoui03.github.io/"/>
-  <updated>2024-04-12T10:08:00.000Z</updated>
+  <updated>2024-04-18T10:08:00.000Z</updated>
   <id>https://coucoui03.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>70-爬楼梯</title>
-    <link href="https://coucoui03.github.io/posts/dfb8a81g.html"/>
-    <id>https://coucoui03.github.io/posts/dfb8a81g.html</id>
-    <published>2024-04-06T11:56:40.000Z</published>
-    <updated>2024-04-12T10:08:00.000Z</updated>
+    <link href="https://coucoui03.github.io/posts/8f66c494.html"/>
+    <id>https://coucoui03.github.io/posts/8f66c494.html</id>
+    <published>2024-04-13T11:56:40.000Z</published>
+    <updated>2024-04-18T10:08:00.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="70-爬楼梯"><a href="#70-爬楼梯" class="headerlink" title="70-爬楼梯"></a>70-爬楼梯</h1><ul><li><p>题目描述</p><ul><li>假设你正在爬楼梯。需要 n 阶你才能到达楼顶。每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？</li></ul></li><li><p>解题思路：</p><ul><li>1阶   1种</li><li>2阶   2种</li><li>3阶   3种</li></ul></li><li><p>步骤</p><ol><li>dp数组以及下际的含义：<br> dp[i]:达到i阶有dp[i]种方法</li><li>递推公式<br> dp[i] = dp[i-1] + dp[i-2]</li><li>dp数组如何初始化<br> dp[1] = 1; dp[2] = 2;尽量不初始化dp[0]，因为题目要求是正整数</li><li>遍历顺序<br> 从前向后遍历<br> 注意：很多动规的题目是从后往前遍历的</li><li>打印数组</li></ol></li><li><p>代码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int climbStairs(int n) &#123;</span><br><span class="line">        if(n&lt;=1) return n;</span><br><span class="line">        vector&lt;int&gt; dp(n+1);</span><br><span class="line">        dp[1] = 1;</span><br><span class="line">        dp[2] = 2;</span><br><span class="line">        for(int i = 3; i &lt;= n; i++)&#123;</span><br><span class="line">            dp[i] = dp[i-1] + dp[i-2];</span><br><span class="line">        &#125;</span><br><span class="line">        return dp[n];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><ul><li>时间复杂度：O(n)</li><li>空间复杂度：O(n)</li></ul></li></ul><p>优化空间复杂度<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int climbStairs(int n) &#123;</span><br><span class="line">        if(n &lt;= 1) return n;</span><br><span class="line">        int dp[3];</span><br><span class="line">        dp[1] = 1;</span><br><span class="line">        dp[2] = 2;</span><br><span class="line">        for(int i = 3; i &lt;= n; i++)&#123;</span><br><span class="line">            int sum = dp[1] + dp[2];</span><br><span class="line">            dp[1] = dp[2];</span><br><span class="line">            dp[2] = sum;</span><br><span class="line">        &#125;</span><br><span class="line">        return dp[2];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
     
@@ -32,30 +32,6 @@
 &lt;li&gt;&lt;p&gt;题目描述&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;假设你正在爬楼梯。需要 n 阶你才能到达楼顶。每次你可</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>软件测试</title>
-    <link href="https://coucoui03.github.io/posts/dfb8a81e.html"/>
-    <id>https://coucoui03.github.io/posts/dfb8a81e.html</id>
-    <published>2024-04-06T11:56:40.000Z</published>
-    <updated>2024-04-12T10:08:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h1><ol><li>dp数组以及下际的含义</li><li>递推公式</li><li>dp数组如何初始化</li><li>遍历顺序</li><li>打印数组</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;动态规划&quot;&gt;&lt;a href=&quot;#动态规划&quot; class=&quot;headerlink&quot; title=&quot;动态规划&quot;&gt;&lt;/a&gt;动态规划&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;dp数组以及下际的含义&lt;/li&gt;
-&lt;li&gt;递推公式&lt;/li&gt;
-&lt;li&gt;dp数组如何初始化&lt;/li&gt;
-&lt;li&gt;遍历</summary>
       
     
     
